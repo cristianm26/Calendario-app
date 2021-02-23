@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { CalendarioApp } from './CalendarioApp';
 import reportWebVitals from './reportWebVitals';
-
+import   './styles.css'
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CalendarioApp/>
   </React.StrictMode>,
   document.getElementById('root')
 );
