@@ -46,7 +46,7 @@ export const startChecking = () => {
         if (body.ok) {
             localStorage.setItem('token', body.token);
             localStorage.setItem('token-init-date' , new Date().getTime()); 
-            dispatch(register({
+            dispatch(login({
                 uid: body.uid,
                 name: body.name,
             }))
@@ -62,10 +62,7 @@ const checkingFinish = () => ({
 
 })
 
-const register = (user)=> ({
-    type: types.authStartRegister,
-    payload: user
-})
+
 
 const login = (user) => ({
     type: types.authLogin,
